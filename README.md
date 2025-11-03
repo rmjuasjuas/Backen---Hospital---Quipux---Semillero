@@ -37,33 +37,35 @@ El sector salud necesita sistemas eficientes para gestionar la información de p
 ## Arquitectura del Sistema
 
 ```
-┌─────────────┐
-│   Postman   │ (Cliente REST)
-└──────┬──────┘
-       │ HTTP Request (JSON)
-       ▼
-┌─────────────────────────────┐
-│   PacientesController       │ (Capa de Presentación)
-│   @RestController           │
-└──────────┬──────────────────┘
-           │
-           ▼
-┌─────────────────────────────┐
-│   PacienteService           │ (Capa de Negocio)
-│   @Service                  │
-└──────────┬──────────────────┘
-           │
-           ▼
-┌─────────────────────────────┐
-│   PacientesRepository       │ (Capa de Datos)
-│   JpaRepository             │
-└──────────┬──────────────────┘
-           │
-           ▼
-┌─────────────────────────────┐
-│   PostgreSQL Database       │
-│   Tabla: pacientes          │
-└─────────────────────────────┘
+┌─────────────────────────────────────────┐
+│         CAPA DE PRESENTACIÓN            │
+│         (PacientesController)           │  ← Recibe peticiones HTTP
+│  - Maneja requests/responses            │
+│  - Códigos de estado HTTP               │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│         CAPA DE NEGOCIO                 │
+│         (PacienteService)               │  ← Lógica de la aplicación
+│  - Validaciones                         │
+│  - Conversión DTO ↔ Entity              │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│         CAPA DE DATOS                   │
+│         (PacientesRepository)           │  ← Comunicación con BD
+│  - CRUD operations                      │
+│  - Genera SQL automáticamente           │
+└──────────────┬──────────────────────────┘
+               │
+               ▼
+┌─────────────────────────────────────────┐
+│         BASE DE DATOS                   │
+│         (PostgreSQL)                    │  ← Almacenamiento persistente
+│  - Tabla: pacientes                     │
+└─────────────────────────────────────────┘
 ```
 
 ---
