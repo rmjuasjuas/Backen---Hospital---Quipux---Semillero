@@ -24,13 +24,13 @@ El sector salud necesita sistemas eficientes para gestionar la información de p
 ---
 
 ### Base de Datos
-- **PostgreSQL 18** - Sistema de gestión de base de datos
+- **PostgreSQL 18** - Sistema de BD
 
 ### Herramientas de Desarrollo
-- **IntelliJ IDEA** - IDE principal
-- **Postman** - Testing de API
-- **pgAdmin 4** - Administración de base de datos
-- **Git** - Control de versiones
+- **IntelliJ IDEA**
+- **Postman**
+- **pgAdmin 4**
+- **Git**
 
 ---
 
