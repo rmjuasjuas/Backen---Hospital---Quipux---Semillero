@@ -1,4 +1,4 @@
-# Hospital Backend - API REST
+# Hospital Backend - API
 **Hospital Backend - Sistema de Gestión de Pacientes**  
 API REST desarrollada con Spring Boot para la gestión integral de pacientes en un sistema hospitalario, permitiendo el registro, consulta y administración de historiales médicos.
 
@@ -63,7 +63,7 @@ El sector salud necesita sistemas eficientes para gestionar la información de p
                ▼
 ┌─────────────────────────────────────────┐
 │         BASE DE DATOS                   │
-│         (PostgreSQL)                    │  ← Almacenamiento persistente
+│         (PostgreSQL)                    │  ← Almacenamiento
 │  - Tabla: pacientes                     │
 └─────────────────────────────────────────┘
 ```
